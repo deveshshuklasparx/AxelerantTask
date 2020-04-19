@@ -1,0 +1,114 @@
+/* Eric Meyer's Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+/* Global Typography */
+*, :before, :after{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-size:10px;
+  line-height:1.215;
+  color:$base-color;
+  font-family: $font-family;
+ /* background: url("../images/bg.png") center top;
+  opacity: 0.5;*/
+}
+/* Font Face */
+@font-face {
+    font-family: $font-family;
+    src: url('../fonts/SymphonieGrotesque-Medium.woff2') format('woff2'),
+        url('../fonts/SymphonieGrotesque-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* Global Headings */
+
+/* General Text Formatting */
+blockquote, cite, q, var, dfn {
+  font-style: italic;
+}
+small {
+  font-size: 85.71429%;
+  line-height: 1.75;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  @extend .d-block;
+}
+/* Global Link style */
+a {
+  font-size:$base-font*1.6;
+  outline: none;
+  color:$base-color;
+  text-decoration:underline;
+  @include transition(all 0.4s ease);
+}
+a:hover, a:focus {
+  outline:none;
+  color:#000;
+}
+p{
+  font-size:$base-font*1.6;
+}
+/* Global Button Styles */
+button {
+  outline:none;
+   &:focus  {
+     outline:none;
+   }
+}
+/* Clearfix class*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+   &:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+   }
+}
+#wrapper{
+  overflow: hidden;
+}
+.container{
+  max-width: 1440px;
+  padding:0 15px;
+  margin: 0 auto;
+}
+h2{
+  font-size:$base-font*2.8;
+  margin-bottom: 10px;
+}

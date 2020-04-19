@@ -1,0 +1,449 @@
+@media (min-width: 768px) { 
+  h2{
+    font-size:$base-font*4;
+  }
+  p{
+    font-size: $base-font*2;
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+  .add-wrap{
+    margin-top: 65px;
+    font-size: $base-font*2;
+    a{
+      font-size: $base-font*2;
+    }
+  }
+  .navbar{
+    align-items: end;
+    padding:2rem 0;
+    position: static;
+    background: $bg-transparent;
+    .navbar-brand {
+       width: 100px;
+    }  
+  }
+  #navbarNavDropdown{
+    background: $bg-transparent;
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    position: static;
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+    width: auto;
+    align-self: flex-end;
+    .nav-link{
+      color: $base-color;
+      font-size: $base-font*2.3;
+      &:after{
+          background: $base-color;
+      }
+    }
+  }
+  .navbar-expand-md{
+     .navbar-collapse{
+        justify-content: flex-end;
+     }
+  }
+  .navbar-nav{
+    padding: 0;
+    .nav-item{
+      margin-right: 15px;
+      margin-bottom: 0;
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+  .content {
+    padding-top: 38px;
+  }
+  .desc-wrap{
+    padding:30px 0;
+    p{
+    font-size:$base-font*2.8;
+    }
+  }
+  .award-list{
+    margin-top: 50px;
+    li{
+      width: 115px;
+      margin-right: 49px;
+      margin-left: 15px;
+        &:first-child{
+          width:90px;
+        }
+        &:nth-child(2){
+          width:200px;
+        }
+    }
+  }
+  .membership-block{
+    p{
+      font-size: $base-font*2;
+      a{
+        font-size: $base-font*2;
+      }
+    }
+  }
+   .contact-block{
+    p{
+      font-size: $base-font*2;
+      margin-top: 0;
+      a{
+        font-size: $base-font*2;
+      }
+    }
+  } 
+  .join-block{
+    .mail-text{
+      input{
+        font-size: $base-font*4;
+      }
+    }
+  }
+  .yellow-slide .awards-block:before{
+      transform: scale(10);
+  }
+  .blue-slide .membership-block:before{
+      transform: scale(10);
+  }
+  .red-slide .contact-block:before{
+      transform: scale(10);
+  }
+}
+
+/*-- 1024 --*/
+@media (min-width: 1024px) {
+  .desc{
+    p{
+      font-size: $base-font*4.5;
+    }
+  }
+  .circle{
+    width:450px;
+    height: 450px;
+  }
+  .contact-block{
+    padding-top: 80px;
+    padding-bottom: 210px; 
+  }
+/*-- slide color --*/
+  .awards-block{
+    &:before{
+      @include after(450px, 450px);
+    }
+  }
+   .membership-block{
+    &:before{
+      @include after(450px, 450px);
+    }
+  }
+   .contact-block{
+    &:before{
+      @include after(450px, 450px); 
+    }
+  }
+}
+/*-- 1200 --*/
+@media (min-width: 1200px) {
+  .container{
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 240px;
+  }
+  h2{
+     font-size: $base-font*6.5;
+  }
+  p{
+    font-size:  $base-font*2.5;
+  }
+  .desc{
+    p{
+      font-size: $base-font*4.5;
+    }
+  }
+  .desc-wrap{
+    padding-bottom: 80px;
+  }
+  .awards-block{
+    padding-bottom: 150px; 
+  }
+  .membership-block{
+    padding-bottom: 80px;
+    p{
+      font-size:  $base-font*2.5;
+      padding-left: 40px;
+      a{
+        font-size:  $base-font*2.5;
+      }
+    }
+  }
+   .contact-block{
+    padding-top: 100px;
+    padding-bottom:230px;
+    p{
+      font-size:  $base-font*2.5;
+    }
+  } 
+  .join-block{
+     padding-bottom: 80px; 
+    .mail-text{
+      input{
+        font-size:  $base-font*6.5;
+      }
+    }
+  }
+  .circle{
+    width:550px;
+    height:550px;
+  }
+/*-- slide color --*/
+  .awards-block{
+    &:before{
+      @include after(550px, 550px);
+    }
+  }
+   .membership-block{
+    &:before{
+      @include after(550px, 550px);
+    }
+  }
+   .contact-block{
+    &:before{
+      @include after(550px, 550px); 
+    }
+  }
+  .award-list{
+    margin-top: 74px;
+    li{
+      width: 150px;
+      margin-right: 195px;
+      &:first-child{
+        width:150px;
+      }
+     &:last-child{
+      margin-right:0;
+     }
+     &:nth-child(2){
+      width:285px;
+     }
+    }
+  }
+}
+
+/*-- 1600 --*/
+@media (min-width: 1600px) { 
+  h2{
+    font-size:  $base-font*8.5;
+  }
+  .circle{
+    width:1130px;
+    height: 1130px;
+    &.yellow-circle{
+      top: -255px;
+      left: -500px;
+   }
+   &.blue-circle{
+      top: -345px;
+      right:-358px;
+   }
+   &.red-circle{
+      top: -132px;
+      left: 0px
+   }
+  }
+ .navbar-nav{
+    .nav-item{
+      margin-right: 40px;
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+  .desc-wrap{
+    padding: 11px 0px 57px 45px;
+    p{
+      font-size:  $base-font*5;
+    }
+  }
+  .awards-block {
+    padding: 81px 0 272px;
+    p{
+      font-size:  $base-font*3.4;
+      padding: 47px 21px 0 39px;
+    }
+  }
+  .membership-block{
+    padding: 83px 0 172px;
+    p{
+      padding: 47px 0px 0 62px;
+      font-size:  $base-font*3.4;
+      a{
+        font-size:  $base-font*3.4;
+      }
+    }
+  }
+   .contact-block{
+     padding: 270px 0px 455px 0px;
+     p{
+      font-size:  $base-font*3.4;
+     }
+    
+  } 
+  .join-block{
+    padding: 140px 0px 157px 0px;
+    h2{
+      line-height: 1;
+      margin-bottom: 0;
+    }
+  }
+  .add-wrap{
+    padding: 47px 25px 0 39px;
+    font-size:  $base-font*3.4;
+    a{
+      font-size:  $base-font*3.4;
+    }
+  }
+  .award-list{
+     margin-top: 223px;
+    li{
+      width: 185px;
+      margin-right: 195px;
+      &:first-child{
+        width:180px;
+      }
+     &:last-child{
+      margin-right:0;
+     }
+     &:nth-child(2){
+      width:315px;
+     }
+    } 
+  }
+
+/*-- slide --*/
+  .awards-block{
+    &:before{
+      @include after(1130px, 1130px);
+      @include pos-absolute(-255px,0,auto,-500px);
+    }
+  }
+   .membership-block{
+    &:before{
+      @include after(1130px, 1130px);
+      @include pos-absolute(-345px,-358px,auto,auto);
+    }
+  }
+   .contact-block{
+    &:before{
+      @include after(1130px, 1130px); 
+      @include pos-absolute(-132px,0,auto,0px);
+    }
+  }
+}
+/*-- 1600 --*/
+@media (min-width: 1920px) { 
+   h2{
+     font-size: $base-font*10.4;
+  }
+  p{
+    font-size:  $base-font*3.4;
+  }
+  .navbar .navbar-brand {
+    width:auto;
+    margin-left: 0;
+    margin-right: 1px;
+  }  
+  .navbar{
+    padding: 2rem 0 5rem;
+  }
+  #navbarNavDropdown{
+   padding: 0px;
+    margin-top: 0px;
+    .nav-link{
+      font-size: $base-font*2.6;
+      padding: 0;
+      
+    }
+  }
+  .navbar-expand-md{
+     .navbar-collapse{
+        justify-content: flex-end;
+     }
+  }
+  .navbar-nav{
+    .nav-item{
+      margin-right: 72px; 
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+  .content {
+    padding-top: 135px;
+  }
+  .desc-wrap{
+    p{
+      font-size: $base-font*6.6;
+    }
+  }
+  .award-list{
+    li{
+      width: auto;
+      &:first-child{
+        width:auto;
+      }
+     &:nth-child(2){
+      width:auto;
+     }
+    }
+  }
+  
+  .awards-block {
+    p{
+      font-size:  $base-font*3.4;
+    }
+  }
+  .membership-block{
+    padding: 83px 0 172px;
+    p{
+      font-size:  $base-font*3.4;
+      a{
+        font-size:  $base-font*3.4;
+      }
+    }
+  }
+   .contact-block{
+     p{
+      font-size:  $base-font*3.4;
+     }
+    
+  } 
+  .join-block{
+    h2{
+      line-height: 1;
+      margin-bottom: 0;
+      font-size:  $base-font*10.6;
+    }
+    .mail-text{
+      input{
+         font-size: $base-font*10.6;
+       }
+    }
+  }
+  .circle{
+    &.yellow-circle{
+      top: -392px;
+      left: -500px;
+   }
+  }
+  .awards-block{
+    &:before{
+      @include pos-absolute(-392px,0,auto,-500px);
+    }
+  }
+
+}

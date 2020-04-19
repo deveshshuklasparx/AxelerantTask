@@ -1,0 +1,322 @@
+.header{
+  height: 82px;
+}
+.navbar{
+  padding:1.2rem 0rem 2rem;
+  background: $color-white;
+  .navbar-brand{
+    width: 65px;
+    margin-left: 15px;
+  }
+}
+.navbar-toggler{
+  width: 28px;
+  height: 28px;
+  position: relative;
+  border:0;
+  outline: 0; 
+  margin-right: 15px;
+    .hamburger{
+      &.active{
+        background: transparent; 
+        &:after{
+          @include after(100%, 100%);
+          @include transform(rotate(135deg));
+          top:-2px;
+        }
+        &:before{
+          @include after(100%, 100%);
+          @include transform(rotate(45deg));
+          top: -2px; 
+        }
+    }
+  }
+} 
+.hamburger{
+  width: 100%;
+  height: 2px;
+  @include pos-absolute(auto,auto,auto,0);
+  background: $base-color;
+  @include transition(all 0.5s ease-in-out);
+    &:after{
+      @include after(100%, 100%);
+      @include pos-absolute(auto,0,-8px,0);
+      background: $base-color;
+      @include transition(all 0.5s ease-in-out);
+    }
+     &:before{
+      @include after(100%, 100%);
+      @include pos-absolute(-8px,0,auto,0);
+      background: $base-color;
+      @include transition(all 0.5s ease-in-out);
+    }
+}
+#navbarNavDropdown{
+  background: $base-color;
+  @include pos-absolute(100%,0,0px,0);
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  .nav-link{
+    color: $color-white;
+    text-decoration:none;
+    position: relative;
+    &:after{
+        @include after(0, 2px);
+        @include pos-absolute(auto,0,0px,0);
+        background: $color-white;
+        @include transition(all 0.5s ease-in-out);
+    }
+    &:hover{
+     &:after{
+        @include after(100%, 2px);
+    }
+    }
+  }
+  &.show{
+    height: 150px;
+    opacity: 1;
+  }
+}
+.navbar-nav{
+  padding: 15px;
+  .nav-item{
+    margin-bottom: 10px;
+  }
+}
+.content{
+  padding-top: 40px;
+}
+.row{
+    pointer-events: none;
+    position: relative;
+    z-index: 9;
+    p{
+      a{
+        pointer-events: all;
+      }
+    }
+  }
+.line{
+   position: relative;
+  &:after{
+    @include after(100%, 4px);
+    @include pos-absolute(-5px,0,auto,0);
+    background: $base-color;
+  }
+}
+.desc{
+  pointer-events: none;
+  position: relative;
+  z-index: 9;
+}
+.desc-wrap{
+  padding:15px 0;
+  margin-bottom: 10px;
+  opacity: 0;
+  @extend .line;
+  &.animated{
+    opacity: 1;
+  }
+}
+
+.awards-block{
+  padding:20px 0 50px;
+  @extend .line;
+  h2{
+    opacity: 0;
+    &.animated{
+      opacity: 1;
+    }
+  }
+  p{
+    opacity: 0;
+    &.animated{
+      opacity: 1;
+    }
+  }
+  p{
+    margin-bottom: 30px;
+  }
+}
+
+.circle{
+    width:285px;
+    height: 285px;
+   @include pos-absolute(auto,0,0px,0);
+   @include radius(50%);
+   background: red;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   &:hover{
+    transform:scale(1.1);
+   }
+   &.yellow-circle{
+      top: -45px;
+      right: auto;
+      bottom: 0px;
+      left: -145px;
+      background: $color-yellow;
+   }
+   &.blue-circle{
+      top: -60px;
+      right:-145px;
+      bottom: 0px;
+      left: auto;
+      background: $color-blue;
+   }
+   &.red-circle{
+      top: -35px;
+      right: 0px;
+      bottom: 0px;
+      left: 45px;
+      margin: 0 auto;
+      background:$color-red;
+   }
+   &.slide{
+      transition: all 0.5s ease-in-out;
+      background: $color-white;
+  }
+
+}
+.award-list{
+  pointer-events: none;
+  position: relative;
+  z-index: 9;
+  li{
+    margin-bottom: 15px;
+    width:75px;
+    margin-right: 10px;
+    opacity: 0;
+    &.animated{
+      opacity: 1;
+    }
+    &:first-child{
+      width:60px;
+    }
+     &:last-child{
+      margin-right:0;
+     }
+     &:nth-child(2){
+      width:130px;
+     }
+  }
+}
+.membership-block{
+  @extend .line;
+  @extend .desc-wrap;
+  opacity: 1;
+  padding-bottom: 30px;
+  h2{
+    opacity: 0;
+    &.animated{
+      opacity: 1;
+    }
+  }
+  p{
+    opacity: 0;
+    &.animated{
+      opacity: 1;
+    }
+   }
+}
+.join-block{
+  @extend .line;
+   @extend .desc-wrap;
+   opacity: 1;
+   padding-bottom: 30px;
+   pointer-events: none;
+   position: relative;
+   z-index: 9;
+  .mail-text{
+       opacity: 1;
+       pointer-events: all;
+      &.animated{
+        opacity: 1;
+      }
+      input{
+       width: 100%;
+       padding: 5px;
+       color:$color-grey;
+       font-size:$base-font*2.8;
+       text-align: center;
+       background:$bg-transparent;
+       cursor: pointer;
+       border:0;
+       outline: 0;
+       ::placeholder{
+        color:$color-grey;
+       font-size:$base-font*2.8;
+       text-align: center;
+       }
+      }
+    }
+}
+.contact-block{
+  @extend .line;
+   @extend .desc-wrap;
+   opacity: 1;
+   padding-bottom: 95px;
+   h2{
+    opacity: 0;
+    &.animated{
+      opacity: 1;
+    }
+   }
+}
+.add-wrap{
+  font-size:$base-font*1.6;
+  opacity: 0;
+  a{
+    font-size:$base-font*1.6;
+    pointer-events: all;
+  }
+   &.animated{
+      opacity: 1;
+    }
+}
+
+/*-- slide --*/
+.awards-block{
+    &:before{
+      @include after(285px, 285px);
+      @include pos-absolute(-45px,auto,0,-145px);
+      background:  $color-yellow;
+      @include transition(all 0.5s ease);
+      @include radius(50%);
+      z-index: -1;
+    }
+    
+  }
+  .yellow-slide .awards-block:before{
+      transform: scale(8);
+  }
+   .membership-block{
+    &:before{
+      @include after(285px, 285px);
+      @include pos-absolute(-60px,-145px,auto,auto);
+      background: $color-blue;
+      @include transition(all 0.5s ease);
+      @include radius(50%);
+      z-index: -2;
+    }
+  }
+  .blue-slide .membership-block:before{
+      transform: scale(8);
+  }
+   .contact-block{
+    &:before{
+      @include after(285px, 285px); 
+      @include pos-absolute(-35px,0,auto,45px);
+      background:$color-red;
+      margin: 0 auto;
+      @include transition(all 0.5s ease);
+      @include radius(50%);
+      z-index: -3;
+    }
+  }
+  .red-slide .contact-block:before{
+      transform: scale(8);
+  }
+  

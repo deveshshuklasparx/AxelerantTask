@@ -1,0 +1,49 @@
+@media (min-width: 768px) { 
+  h2{
+    font-size:$base-font*4;
+  }
+  p{
+    font-size: $base-font*2;
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+  .logo{
+     width:128px;
+  }
+  header{
+    position: static;
+  }
+  .menu{
+    position: static;
+    border-top:none;
+    transform: none;
+    display: flex;
+    align-items: center;
+    padding:0;
+    li{
+      margin-right:18px;
+      a{
+        padding:0;
+      }
+      button{
+       width:161px;
+       padding:7px 0;
+      }
+    }
+   li:last-child{
+     margin-right:0;
+   }
+  }
+  .hamburger{
+    display:none;
+  }
+}
+
+@media (min-width: 991px) { 
+
+.menu{
+  li{
+    margin-right:57px;
+  }}
+
+}
